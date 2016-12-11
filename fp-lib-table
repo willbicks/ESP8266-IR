@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name adafruit)(type Eagle)(uri "$(KIPRJMOD)\\adafruit.lbr")(options "")(descr ""))
+  (lib (name Custom)(type KiCad)(uri "$(KIPRJMOD)\\")(options "")(descr ""))
+)
