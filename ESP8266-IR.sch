@@ -193,12 +193,6 @@ F 3 "" H 2500 1200 50  0000 C CNN
 	1    2500 1200
 	1    0    0    -1  
 $EndComp
-Text Label 6500 2550 2    51   ~ 0
-GPIO5
-Text Label 4600 2650 0    51   ~ 0
-GPIO14
-Text Label 4600 2550 0    51   ~ 0
-GPIO16
 $Comp
 L SW_PUSH SW2
 U 1 1 584B685C
@@ -271,15 +265,7 @@ Wire Wire Line
 Connection ~ 2100 1350
 Connection ~ 1700 1350
 Wire Wire Line
-	6100 2450 6500 2450
-Wire Wire Line
-	6500 2550 6100 2550
-Wire Wire Line
-	6100 2650 6500 2650
-Wire Wire Line
-	4600 2650 5000 2650
-Wire Wire Line
-	5000 2550 4600 2550
+	6100 2650 6800 2650
 Wire Wire Line
 	3750 5200 3700 5200
 Connection ~ 3700 5200
@@ -368,14 +354,14 @@ Wire Wire Line
 Wire Wire Line
 	6350 3200 6350 3350
 $Comp
-L CONN_01X06 P1
+L CONN_01X05 P1
 U 1 1 584BB4C5
-P 2600 4000
-F 0 "P1" H 2600 4350 50  0000 C CNN
-F 1 "CONN_01X06" V 2700 4000 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x06" H 2600 4000 60  0001 C CNN
-F 3 "" H 2600 4000 60  0000 C CNN
-	1    2600 4000
+P 2600 4050
+F 0 "P1" H 2600 4400 50  0000 C CNN
+F 1 "CONN_01X05" V 2700 4050 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05" H 2600 4050 60  0001 C CNN
+F 3 "" H 2600 4050 60  0000 C CNN
+	1    2600 4050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -472,7 +458,7 @@ Wire Wire Line
 Wire Wire Line
 	7300 4750 7500 4750
 Wire Wire Line
-	7300 4750 7300 4100
+	7300 4100 7300 4750
 Connection ~ 7300 4250
 $Comp
 L +3.3V #PWR012
@@ -599,8 +585,6 @@ Text Label 4850 1400 1    60   ~ 0
 IR_IN
 Wire Wire Line
 	4850 1400 4850 1150
-Text Label 6500 2450 2    60   ~ 0
-IR_IN
 $Comp
 L Q_NMOS_GDS Q3
 U 1 1 585306EF
@@ -639,6 +623,74 @@ Connection ~ 8750 5100
 Wire Wire Line
 	8750 5350 9150 5350
 Connection ~ 9150 5350
-Text Label 6500 2650 2    60   ~ 0
+Text Label 6500 2650 2    49   ~ 0
 IR_OUT
+Text Label 6800 2650 2    49   ~ 0
+GPIO0
+Text Label 4750 2650 0    49   ~ 0
+IR_EN
+Text Label 4750 2550 0    49   ~ 0
+IR_IN
+Wire Wire Line
+	4750 2550 5000 2550
+Wire Wire Line
+	5000 2650 4750 2650
+$Comp
+L C C3
+U 1 1 585DBBBC
+P 8850 1700
+F 0 "C3" H 8875 1800 50  0000 L CNN
+F 1 "C" H 8875 1600 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 8888 1550 30  0001 C CNN
+F 3 "" H 8850 1700 60  0000 C CNN
+	1    8850 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C5
+U 1 1 585DBCBA
+P 9050 1700
+F 0 "C5" H 9075 1800 50  0000 L CNN
+F 1 "C" H 9075 1600 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 9088 1550 30  0001 C CNN
+F 3 "" H 9050 1700 60  0000 C CNN
+	1    9050 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR016
+U 1 1 585DBD00
+P 9050 1950
+F 0 "#PWR016" H 9050 1700 50  0001 C CNN
+F 1 "GND" H 9050 1800 50  0000 C CNN
+F 2 "" H 9050 1950 60  0000 C CNN
+F 3 "" H 9050 1950 60  0000 C CNN
+	1    9050 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR017
+U 1 1 585DBF63
+P 9050 1450
+F 0 "#PWR017" H 9050 1300 50  0001 C CNN
+F 1 "+3V3" H 9050 1590 50  0000 C CNN
+F 2 "" H 9050 1450 60  0000 C CNN
+F 3 "" H 9050 1450 60  0000 C CNN
+	1    9050 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 1850 8850 1900
+Wire Wire Line
+	8850 1900 9050 1900
+Wire Wire Line
+	9050 1850 9050 1950
+Connection ~ 9050 1900
+Wire Wire Line
+	9050 1550 9050 1450
+Wire Wire Line
+	8850 1550 8850 1500
+Wire Wire Line
+	8850 1500 9050 1500
+Connection ~ 9050 1500
 $EndSCHEMATC
